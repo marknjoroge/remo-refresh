@@ -1,0 +1,20 @@
+{
+    "manifest_version": 2,
+    "name": "Auto Refresh Extension",
+    "version": "1.0",
+    "description": "Refreshes the page if the specified class has text '0'",
+    "permissions": [
+        "activeTab",
+        "storage"
+    ],
+    "content_scripts": [
+        {
+            "matches": [
+                "*://*.datacompute.google.com/*"
+            ],
+            "js": [
+                "content.js"
+            ]
+        }
+    ]
+}
