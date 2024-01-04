@@ -7,6 +7,9 @@
         "activeTab",
         "storage"
     ],
+    "web_accessible_resources": [
+        "assets/music/alarm.mp3"
+    ],
     "content_scripts": [
         {
             "matches": [
