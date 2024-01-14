@@ -1,13 +1,15 @@
 var playing = false;
 
 function checkAndRefresh() {
-    var element = document.getElementsByClassName("l3t8Qe")[0];
+    var element = document.querySelectorAll('a[href="/dashboard"]');
+    var spinner = document.querySelectorAll('.jsx-3750104642.spinner-wrapper');
 
-    if (element && !playing) {
-        if (element.textContent.trim() === "0") {
-            console.log("Refreshing page...");
-            location.reload();
-        } else {
+    if (element) {
+        // if (element.textContent.trim() === "0") {
+        // console.log("Refreshing page...");
+        location.reload();
+    } else {
+        if (!spinner) {
             playNotification();
             return;
         }
@@ -19,7 +21,7 @@ function playNotification() {
     if (!playing) { myAudio.play(); playing = true; }
 }
 
-setInterval(checkAndRefresh, 10000);
+setInterval(checkAndRefresh, 13000);
 // document.body.addEventListener("mousemove", function () {
 //     playNotification();
 // })

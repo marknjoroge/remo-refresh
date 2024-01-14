@@ -13,7 +13,8 @@
     "content_scripts": [
         {
             "matches": [
-                "*://*.datacompute.google.com/*"
+                "https://www.remotasks.com/en/tasks",
+                "https://www.remotasks.com/tasks"
             ],
             "js": [
                 "content.js"
