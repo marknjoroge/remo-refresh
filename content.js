@@ -1,19 +1,33 @@
 var playing = false;
 
 function checkAndRefresh() {
-    var element = document.querySelectorAll('a[href="/dashboard"]');
-    var spinner = document.querySelectorAll('.jsx-3750104642.spinner-wrapper');
+    // var element = document.querySelectorAll('.leading-6.py-2.text-neutral-800.w-1/3.text-center');
+    // var spinner = document.querySelectorAll('.jsx-3750104642.spinner-wrapper');
+    // var title
 
-    if (element) {
-        // if (element.textContent.trim() === "0") {
-        // console.log("Refreshing page...");
+    var pageText = document.body.textContent || document.body.innerText;
+
+    if (pageText.includes("Your task queue is currently empty")) {
         location.reload();
     } else {
-        if (!spinner) {
-            playNotification();
-            return;
-        }
+        // if (!spinner) {
+        playNotification();
+        return;
+        // }
     }
+
+
+
+    // if (element) {
+    //     // if (element.textContent.trim() === "0") {
+    //     // console.log("Refreshing page...");
+    //     location.reload();
+    // } else {
+    //     if (!spinner) {
+    //         playNotification();
+    //         return;
+    //     }
+    // }
 }
 
 function playNotification() {

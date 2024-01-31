@@ -13,8 +13,7 @@
     "content_scripts": [
         {
             "matches": [
-                "https://www.remotasks.com/en/tasks",
-                "https://www.remotasks.com/tasks"
+                "https://app.tryoutlier.com/en/expert/tasks"
             ],
             "js": [
                 "content.js"
