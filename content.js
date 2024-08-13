@@ -1,17 +1,15 @@
 var playing = false;
 
 function checkAndRefresh() {
-    var element = document.getElementsByClassName("l3t8Qe")[0];
+    var currentlyEmpty = document.body.textContent.includes("Your task queue is currently empty");
 
-    if (element && !playing) {
-        if (element.textContent.trim() === "0") {
-            console.log("Refreshing page...");
-            location.reload();
-        } else {
+    if (currentlyEmpty) {
+	    location.reload();
+        } else if(!playing) {
             playNotification();
             return;
         }
-    }
+
 }
 
 function playNotification() {
@@ -19,7 +17,7 @@ function playNotification() {
     if (!playing) { myAudio.play(); playing = true; }
 }
 
-setInterval(checkAndRefresh, 10000);
+setInterval(checkAndRefresh, 30000);
 // document.body.addEventListener("mousemove", function () {
 //     playNotification();
 // })
