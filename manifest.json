@@ -13,7 +13,8 @@
     "content_scripts": [
         {
             "matches": [
-                "*://*.datacompute.google.com/*"
+                "https://app.outlier.ai/en/expert",
+                "https://app.outlier.ai/expert"
             ],
             "js": [
                 "content.js"
